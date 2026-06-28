@@ -13,9 +13,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hritwik Tiwary | React.js / Next.js Performance Engineer",
+  title: "Hritwik Tiwary | React & Next.js Performance Engineer",
   description:
-    "Premium portfolio of Hritwik Tiwary, a React.js and Next.js Performance Engineer focused on making frontend applications faster, smoother, and more responsive.",
+    "Frontend performance engineering for React and Next.js applications. Case studies in dashboard optimization, React Profiler analysis, Core Web Vitals, and measurable performance improvements.",
+  openGraph: {
+    title: "Hritwik Tiwary | React & Next.js Performance Engineer",
+    description:
+      "Documented React and Next.js performance case studies with measurable frontend optimization results.",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Hritwik Tiwary React and Next.js Performance Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hritwik Tiwary | React & Next.js Performance Engineer",
+    description:
+      "Frontend performance engineering for React and Next.js applications.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
