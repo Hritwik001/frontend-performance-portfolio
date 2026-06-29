@@ -57,7 +57,7 @@ export function Hero() {
             </p>
 
             <h2 className="mt-4 text-2xl font-semibold tracking-tight">
-              Two documented React performance case studies
+              React & Next.js Performance Case Studies
             </h2>
 
             <p className="mt-3 leading-7 text-[var(--text-secondary)]">
