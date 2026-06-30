@@ -68,6 +68,8 @@ https://frontend-performance-portfolio.vercel.app/
 ```bash
 git clone https://github.com/Hritwik001/frontend-performance-portfolio.git
 
+cd frontend-performance-portfolio
+
 npm install
 
 npm run dev
