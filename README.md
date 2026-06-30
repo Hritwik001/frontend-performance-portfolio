@@ -66,7 +66,7 @@ https://frontend-performance-portfolio.vercel.app/
 ## 💻 Run Locally
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Hritwik001/frontend-performance-portfolio.git
 
 npm install
 
