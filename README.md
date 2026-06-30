@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ Frontend Performance Portfolio
 
-## Getting Started
+A modern portfolio showcasing React.js & Next.js frontend performance engineering, optimization case studies, and production-quality frontend projects.
 
-First, run the development server:
+🌐 Live Website:
+https://frontend-performance-portfolio.vercel.app
+
+
+## 📖 Overview
+
+This portfolio was built to showcase practical frontend performance engineering skills through real-world case studies and production-style applications.
+
+Rather than listing technologies, the portfolio demonstrates how React.js and Next.js applications can be analyzed, optimized, and improved using modern frontend engineering practices.
+
+It serves as a central hub for my performance case studies, featured projects, and engineering approach.
+
+
+## ✨ Features
+
+- ⚡ Modern responsive portfolio
+- 📊 Frontend performance case studies
+- 🚀 React.js & Next.js specialization
+- 📱 Fully responsive design
+- 🎨 Clean modern UI
+- 🌙 Professional layout
+- 🔗 Direct project links
+- 📈 Performance-focused branding
+
+
+## 🛠 Tech Stack
+
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+### Deployment
+
+- Vercel
+
+
+## 📂 Portfolio Sections
+
+- Home
+- About
+- Featured Case Studies
+- Performance Investigations
+- Skills
+- Contact
+
+
+## 🚀 Featured Projects
+
+- RevenuePulse
+- SupportDesk
+- Frontend Performance Case Studies
+
+
+## 🌐 Live Demo
+
+https://frontend-performance-portfolio.vercel.app/
+
+
+## 💻 Run Locally
 
 ```bash
+git clone <repository-url>
+
+npm install
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Future Improvements
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- More performance investigations
+- Additional production case studies
+- Technical blog integration
+- Dark mode
+- Advanced animations
+- More optimization walkthroughs
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## 📬 Contact
 
-To learn more about Next.js, take a look at the following resources:
+LinkedIn: https://www.linkedin.com/in/hritwik-tiwary/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Portfolio: https://frontend-performance-portfolio.vercel.app/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+GitHub: https://github.com/Hritwik001
 
-## Deploy on Vercel
+Email: hritwiktiwary001@gmail.com
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
