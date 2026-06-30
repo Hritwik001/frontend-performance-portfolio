@@ -1,6 +1,6 @@
 # ⚡ Frontend Performance Portfolio
 
-A modern portfolio showcasing React.js & Next.js frontend performance engineering, optimization case studies, and production-quality frontend projects.
+A portfolio showcasing React.js & Next.js frontend performance engineering, optimization case studies, and production-quality frontend projects.
 
 🌐 Live Website:
 https://frontend-performance-portfolio.vercel.app
@@ -17,7 +17,7 @@ It serves as a central hub for my performance case studies, featured projects, a
 
 ## ✨ Features
 
-- ⚡ Modern responsive portfolio
+- ⚡ Responsive portfolio
 - 📊 Frontend performance case studies
 - 🚀 React.js & Next.js specialization
 - 📱 Fully responsive design
