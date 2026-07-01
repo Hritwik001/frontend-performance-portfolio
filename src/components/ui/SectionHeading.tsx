@@ -1,3 +1,5 @@
+import { Reveal } from "@/components/motion/Reveal";
+
 import { Eyebrow } from "./typography/Eyebrow";
 import { Heading } from "./typography/Heading";
 import { Text } from "./typography/Text";
@@ -15,22 +17,15 @@ export function SectionHeading({
   description,
   align = "left",
 }: SectionHeadingProps) {
-  const alignment =
-    align === "center"
-      ? "mx-auto text-center"
-      : "";
+  const alignment = align === "center" ? "mx-auto text-center" : "";
 
   return (
-    <div className={`max-w-3xl ${alignment}`}>
+    <Reveal className={`max-w-3xl ${alignment}`}>
       <Eyebrow>{eyebrow}</Eyebrow>
 
-      <Heading className="mt-4">
-        {title}
-      </Heading>
+      <Heading className="mt-4">{title}</Heading>
 
-      <Text className="mt-6">
-        {description}
-      </Text>
-    </div>
+      <Text className="mt-6">{description}</Text>
+    </Reveal>
   );
 }

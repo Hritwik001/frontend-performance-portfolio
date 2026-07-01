@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
+import { Reveal } from "@/components/motion/Reveal";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/typography/Eyebrow";
@@ -16,7 +17,7 @@ export function Hero() {
 
       <Container>
         <div className="relative z-10 grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
-          <div>
+          <Reveal direction="left">
             <Eyebrow>React.js / Next.js Performance Engineer</Eyebrow>
 
             <Heading className="mt-5 max-w-4xl">
@@ -24,9 +25,8 @@ export function Hero() {
             </Heading>
 
             <Text className="mt-6 max-w-3xl">
-              I help engineering teams identify rendering bottlenecks, optimize
-              React dashboards, improve responsiveness, and make frontend
-              applications feel faster for real users.
+              I help engineering teams identify rendering bottlenecks, optimize React dashboards,
+              improve responsiveness, and make frontend applications feel faster for real users.
             </Text>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -49,9 +49,13 @@ export function Hero() {
                 <Button variant="secondary">Contact Me</Button>
               </a>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="rounded-[var(--radius-xl)] border border-[var(--border)] bg-white/[0.03] p-6 shadow-2xl shadow-black/30">
+          <Reveal
+            className="motion-float-panel rounded-[var(--radius-xl)] border border-[var(--border)] bg-white/[0.03] p-6 shadow-2xl shadow-black/30"
+            delay={140}
+            direction="right"
+          >
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">
               Performance Proof
             </p>
@@ -61,62 +65,55 @@ export function Hero() {
             </h2>
 
             <p className="mt-3 leading-7 text-[var(--text-secondary)]">
-              Real before/after optimization work across dashboard-heavy React
-              and Next.js applications, validated using React Profiler and
-              documented case studies.
+              Real before/after optimization work across dashboard-heavy React and Next.js
+              applications, validated using React Profiler and documented case studies.
             </p>
 
             <div className="mt-8 space-y-4">
               <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-5">
                 <p className="text-sm text-[var(--text-muted)]">SupportDesk</p>
-                <p className="mt-2 text-xl font-semibold">3675ms → 2.3ms</p>
+                <p className="mt-2 text-xl font-semibold">3675ms {"\u2192"} 2.3ms</p>
                 <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
-                  Ticketing dashboard optimized for search, filtering,
-                  rendering workload, pagination and responsiveness.
+                  Ticketing dashboard optimized for search, filtering, rendering workload,
+                  pagination and responsiveness.
                 </p>
               </div>
 
               <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-5">
                 <p className="text-sm text-[var(--text-muted)]">RevenuePulse</p>
-                <p className="mt-2 text-xl font-semibold">2000ms → 140ms</p>
+                <p className="mt-2 text-xl font-semibold">2000ms {"\u2192"} 140ms</p>
                 <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
-                  SaaS analytics dashboard optimized for KPI loading, chart
-                  rendering, search, filtering and dashboard responsiveness.
+                  SaaS analytics dashboard optimized for KPI loading, chart rendering, search,
+                  filtering and dashboard responsiveness.
                 </p>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
 
         <div className="relative z-10 mt-20 border-t border-[var(--border)] pt-10">
           <div className="grid gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
-            <div>
-  <p className="text-3xl font-bold">React Profiler</p>
-  <p className="mt-2 text-sm text-[var(--text-secondary)]">
-    Primary Investigation Tool
-  </p>
-</div>
-
-            <div>
-              <p className="text-3xl font-bold">3675ms → 2.3ms</p>
+            <Reveal className="motion-stat" delay={80}>
+              <p className="text-3xl font-bold">React Profiler</p>
               <p className="mt-2 text-sm text-[var(--text-secondary)]">
-                Best Measured Improvement
+                Primary Investigation Tool
               </p>
-            </div>
+            </Reveal>
 
-            <div>
+            <Reveal className="motion-stat" delay={160}>
+              <p className="text-3xl font-bold">3675ms {"\u2192"} 2.3ms</p>
+              <p className="mt-2 text-sm text-[var(--text-secondary)]">Best Measured Improvement</p>
+            </Reveal>
+
+            <Reveal className="motion-stat" delay={240}>
               <p className="text-3xl font-bold">React + Next.js</p>
-              <p className="mt-2 text-sm text-[var(--text-secondary)]">
-                Primary Technology Stack
-              </p>
-            </div>
+              <p className="mt-2 text-sm text-[var(--text-secondary)]">Primary Technology Stack</p>
+            </Reveal>
 
-            <div>
+            <Reveal className="motion-stat" delay={320}>
               <p className="text-3xl font-bold">Profiler</p>
-              <p className="mt-2 text-sm text-[var(--text-secondary)]">
-                Measurement & Validation
-              </p>
-            </div>
+              <p className="mt-2 text-sm text-[var(--text-secondary)]">Measurement & Validation</p>
+            </Reveal>
           </div>
         </div>
       </Container>

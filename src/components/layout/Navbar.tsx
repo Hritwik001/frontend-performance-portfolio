@@ -43,10 +43,10 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-  <a href="#contact" aria-label="Go to contact section">
-    <Button>Let's Talk</Button>
-  </a>
-</div>
+            <a href="#contact" aria-label="Go to contact section">
+              <Button>Let&apos;s Talk</Button>
+            </a>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -75,12 +75,12 @@ export function Navbar() {
               ))}
 
               <a
-  href="#contact"
-  onClick={() => setIsOpen(false)}
-  aria-label="Go to contact section"
->
-  <Button className="mt-2 w-full">Let's Talk</Button>
-</a>
+                href="#contact"
+                onClick={() => setIsOpen(false)}
+                aria-label="Go to contact section"
+              >
+                <Button className="mt-2 w-full">Let&apos;s Talk</Button>
+              </a>
             </div>
           </div>
         )}
