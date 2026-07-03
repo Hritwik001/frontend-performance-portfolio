@@ -1,6 +1,7 @@
 "use client";
 
-import { CSSProperties, ReactNode, useEffect, useRef } from "react";
+import { ReactNode } from "react";
+import { motion } from "framer-motion";
 
 type RevealDirection = "up" | "left" | "right" | "none";
 
@@ -11,72 +12,31 @@ type RevealProps = {
   direction?: RevealDirection;
 };
 
+const offsets: Record<RevealDirection, { x: number; y: number }> = {
+  up: { x: 0, y: 22 },
+  left: { x: -26, y: 0 },
+  right: { x: 26, y: 0 },
+  none: { x: 0, y: 0 },
+};
+
 export function Reveal({ children, className = "", delay = 0, direction = "up" }: RevealProps) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const element = ref.current;
-
-    if (!element) {
-      return;
-    }
-
-    let frame = 0;
-
-    const updateVisibility = (isVisible: boolean) => {
-      cancelAnimationFrame(frame);
-
-      frame = requestAnimationFrame(() => {
-        element.classList.toggle("is-visible", isVisible);
-        element.dataset.motionState = "ready";
-      });
-    };
-
-    const setVisibility = () => {
-      const rect = element.getBoundingClientRect();
-      const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-      const isVisible = rect.top < viewportHeight * 0.9 && rect.bottom > viewportHeight * 0.08;
-
-      updateVisibility(isVisible);
-    };
-
-    if (!("IntersectionObserver" in window)) {
-      element.classList.add("is-visible");
-      element.dataset.motionState = "ready";
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry?.isIntersecting) {
-          updateVisibility(true);
-        } else {
-          updateVisibility(false);
-        }
-      },
-      {
-        rootMargin: "-14% 0px -16% 0px",
-        threshold: 0.08,
-      }
-    );
-
-    setVisibility();
-    observer.observe(element);
-
-    return () => {
-      cancelAnimationFrame(frame);
-      observer.disconnect();
-    };
-  }, []);
+  const offset = offsets[direction];
 
   return (
-    <div
-      ref={ref}
-      className={`reveal ${className}`}
-      data-reveal-direction={direction}
-      style={{ "--reveal-delay": `${delay}ms` } as CSSProperties}
+    <motion.div
+      className={className}
+      initial={{ opacity: 0, x: offset.x, y: offset.y, filter: "blur(6px)" }}
+      whileInView={{ opacity: 1, x: 0, y: 0, filter: "blur(0px)" }}
+      viewport={{ once: false, margin: "0px 0px -10% 0px", amount: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 140,
+        damping: 20,
+        mass: 0.9,
+        delay: delay / 1000,
+      }}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }

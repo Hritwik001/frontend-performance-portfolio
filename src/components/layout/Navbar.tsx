@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -60,30 +61,39 @@ export function Navbar() {
         </nav>
 
         {/* Mobile Menu */}
-        {isOpen && (
-          <div className="border-t border-[var(--border)] py-6 md:hidden">
-            <div className="flex flex-col gap-5">
-              {navigation.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-white"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
+        <AnimatePresence initial={false}>
+          {isOpen && (
+            <motion.div
+              key="mobile-menu"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+              className="overflow-hidden border-t border-[var(--border)] md:hidden"
+            >
+              <div className="flex flex-col gap-5 py-6">
+                {navigation.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-white"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ))}
 
-              <a
-                href="#contact"
-                onClick={() => setIsOpen(false)}
-                aria-label="Go to contact section"
-              >
-                <Button className="mt-2 w-full">Let&apos;s Talk</Button>
-              </a>
-            </div>
-          </div>
-        )}
+                <a
+                  href="#contact"
+                  onClick={() => setIsOpen(false)}
+                  aria-label="Go to contact section"
+                >
+                  <Button className="mt-2 w-full">Let&apos;s Talk</Button>
+                </a>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </Container>
     </header>
   );

@@ -13,7 +13,7 @@ export function Footer() {
             </Link>
 
             <p className="mt-2">
-              Frontend Performance Engineering for React & Next.js applications.
+              Frontend engineering for React & Next.js products.
             </p>
           </div>
 

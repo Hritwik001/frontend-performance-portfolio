@@ -16,7 +16,7 @@ export function Brand() {
         </span>
 
         <span className="text-xs text-[var(--text-muted)]">
-          Performance Engineer
+          Frontend Engineer
         </span>
       </div>
     </Link>

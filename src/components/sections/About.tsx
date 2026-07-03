@@ -11,35 +11,34 @@ export function About() {
           <div>
             <SectionHeading
               eyebrow="About"
-              title="Frontend Performance Engineer specializing in React & Next.js."
-              description="I work on performance-heavy frontend applications where rendering efficiency, dashboard responsiveness, Core Web Vitals, and real user experience matter."
+              title="Frontend Engineer working across the full product surface."
+              description="New interfaces built from the ground up, and existing ones that have started to feel slow or unwieldy under real data. Performance is where the work goes deepest."
             />
           </div>
 
           <div className="space-y-5 text-[var(--text-secondary)]">
             <p className="leading-8">
-              I specialize in improving React and Next.js applications used in SaaS products and
-              enterprise platforms. My work focuses on identifying rendering bottlenecks, reducing
-              unnecessary re-renders, optimizing dashboard interactions, and making complex
-              interfaces feel faster for real users.
+              My work covers component architecture, state and data flow, interaction design, and
+              visual detail. Recent projects include a kitchen operations dashboard built from the
+              ground up (KitchenFlow) and performance turnarounds on SaaS analytics and ticketing
+              platforms.
             </p>
 
             <p className="leading-8">
-              I approach frontend performance as an engineering investigation: measure the current
-              state, identify the highest-impact bottlenecks, implement targeted improvements, and
-              validate the results using tools like React Profiler, Chrome DevTools, Lighthouse, and
-              Core Web Vitals.
+              Whatever the starting point, the approach stays the same: understand the product and
+              the user, build or fix it with clean, typed, maintainable code, and validate the result
+              with React Profiler, Chrome DevTools, Lighthouse, and Core Web Vitals data.
             </p>
 
             <div className="grid gap-4 pt-4 sm:grid-cols-3">
               <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-4">
                 <p className="text-sm text-[var(--text-muted)]">Primary Stack</p>
-                <p className="mt-2 font-semibold text-white">React • Next.js</p>
+                <p className="mt-2 font-semibold text-white">React • Next.js • TS</p>
               </div>
 
               <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-4">
                 <p className="text-sm text-[var(--text-muted)]">Focus Areas</p>
-                <p className="mt-2 font-semibold text-white">Rendering • CWV</p>
+                <p className="mt-2 font-semibold text-white">Product UI • Performance</p>
               </div>
 
               <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-4">

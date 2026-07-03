@@ -15,12 +15,12 @@ export function Contact() {
           </p>
 
           <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-            Need help making your React or Next.js application feel faster?
+            Let’s talk about the work.
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl leading-8 text-[var(--text-secondary)]">
-            I’m available for frontend performance audits, optimization sprints, and React / Next.js
-            performance-focused engineering work.
+            Available for frontend engineering work: new product builds, dashboard-heavy
+            applications, and performance optimization on React and Next.js codebases.
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">

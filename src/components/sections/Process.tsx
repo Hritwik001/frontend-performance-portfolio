@@ -9,8 +9,8 @@ export function Process() {
       <Container>
         <SectionHeading
           eyebrow="Process"
-          title="A structured approach to frontend performance."
-          description="Every optimization starts with measurement, not assumptions. The goal is to find the highest-impact bottlenecks, fix them carefully, and validate the improvement with real performance data."
+          title="A structured approach to building — and fixing — frontend products."
+          description="The same process applies whether the work is a new product surface or a performance turnaround: understand the problem, build deliberately, measure the result, and ship with evidence."
           align="center"
         />
 

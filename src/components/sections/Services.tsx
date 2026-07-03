@@ -1,4 +1,4 @@
-import { Activity, BarChart3, Gauge, LineChart, PackageSearch, ShieldCheck } from "lucide-react";
+import { Activity, BarChart3, Blocks, Gauge, LayoutGrid, ShieldCheck } from "lucide-react";
 
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
@@ -7,37 +7,37 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const services = [
   {
-    icon: Gauge,
-    title: "Frontend Performance Audit",
+    icon: LayoutGrid,
+    title: "Product & UI Engineering",
     description:
-      "A focused investigation to identify what is slowing your React or Next.js application.",
+      "Component architecture, state design, and interface polish for dashboards, internal tools, and product-grade UI.",
     items: [
-      "React Profiler analysis",
-      "Core Web Vitals review",
-      "Bundle and network analysis",
-      "Prioritized performance roadmap",
+      "React & Next.js architecture",
+      "Component and design systems",
+      "State and data-flow modeling",
+      "Production-ready, typed codebases",
     ],
   },
   {
-    icon: Activity,
-    title: "React & Next.js Optimization Sprint",
+    icon: Gauge,
+    title: "Frontend Performance Optimization",
     description:
-      "Hands-on implementation to improve rendering, responsiveness, search, filtering, and dashboard performance.",
+      "A focused investigation and fix for React or Next.js applications that have started to feel slow.",
     items: [
-      "Re-render optimization",
-      "Memoization strategy",
-      "Next.js image, font and loading improvements",
+      "React Profiler analysis",
+      "Core Web Vitals review",
+      "Re-render and bundle optimization",
       "Before / after performance validation",
     ],
   },
   {
     icon: ShieldCheck,
-    title: "Ongoing Performance Partnership",
+    title: "Ongoing Engineering Partnership",
     description:
-      "Continuous performance support for product teams that want to prevent regressions as the application grows.",
+      "Continuous frontend support for product teams — new features, UI iteration, and performance regression prevention as the application grows.",
     items: [
+      "Feature and UI development",
       "Monthly performance reviews",
-      "Performance regression checks",
       "Release validation",
       "Architecture consultation",
     ],
@@ -45,10 +45,10 @@ const services = [
 ];
 
 const capabilities = [
-  { icon: BarChart3, label: "Dashboard Performance" },
-  { icon: PackageSearch, label: "Bundle Optimization" },
-  { icon: LineChart, label: "Core Web Vitals" },
-  { icon: Activity, label: "React Rendering" },
+  { icon: LayoutGrid, label: "Product UI Engineering" },
+  { icon: Blocks, label: "Design Systems" },
+  { icon: BarChart3, label: "Dashboard Systems" },
+  { icon: Activity, label: "Performance Engineering" },
 ];
 
 export function Services() {
@@ -57,8 +57,8 @@ export function Services() {
       <Container>
         <SectionHeading
           eyebrow="Services"
-          title="Performance engineering support for React & Next.js teams."
-          description="Three focused ways to diagnose, fix, and maintain frontend performance without turning the engagement into a vague development project."
+          title="Frontend engineering across three types of engagements."
+          description="New interfaces built from the ground up, performance turnarounds on existing ones, and ongoing support as the product grows."
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
