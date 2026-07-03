@@ -1,20 +1,31 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function useScrolled() {
   const [scrolled, setScrolled] = useState(false);
+  const frame = useRef(0);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const check = () => {
+      frame.current = 0;
       setScrolled(window.scrollY > 20);
     };
 
-    handleScroll();
+    const handleScroll = () => {
+      if (!frame.current) {
+        frame.current = requestAnimationFrame(check);
+      }
+    };
 
-    window.addEventListener("scroll", handleScroll);
+    check();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      cancelAnimationFrame(frame.current);
+    };
   }, []);
 
   return scrolled;

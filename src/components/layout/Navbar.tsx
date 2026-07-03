@@ -18,10 +18,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 z-50 transition-colors duration-300 ${
         scrolled
-          ? "border-b border-[var(--border-strong)] bg-black/80 backdrop-blur-xl"
-          : "border-b border-transparent bg-black/40 backdrop-blur-md"
+          ? "border-b border-[var(--border-strong)] bg-black/80 backdrop-blur-md"
+          : "border-b border-transparent bg-black/40 backdrop-blur-sm"
       }`}
     >
       <Container>

@@ -1,10 +1,20 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export function CursorSpotlight() {
+  const frame = useRef(0);
+  const pending = useRef<MouseEvent | null>(null);
+
   useEffect(() => {
-    const handleMove = (event: MouseEvent) => {
+    const apply = () => {
+      frame.current = 0;
+      const event = pending.current;
+
+      if (!event) {
+        return;
+      }
+
       const card = (event.target as HTMLElement).closest<HTMLElement>(".motion-card");
 
       if (!card) {
@@ -19,9 +29,20 @@ export function CursorSpotlight() {
       card.style.setProperty("--spot-y", `${y}%`);
     };
 
-    document.addEventListener("mousemove", handleMove);
+    const handleMove = (event: MouseEvent) => {
+      pending.current = event;
 
-    return () => document.removeEventListener("mousemove", handleMove);
+      if (!frame.current) {
+        frame.current = requestAnimationFrame(apply);
+      }
+    };
+
+    document.addEventListener("mousemove", handleMove, { passive: true });
+
+    return () => {
+      document.removeEventListener("mousemove", handleMove);
+      cancelAnimationFrame(frame.current);
+    };
   }, []);
 
   return null;

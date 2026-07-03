@@ -25,8 +25,9 @@ export function Reveal({ children, className = "", delay = 0, direction = "up" }
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, x: offset.x, y: offset.y, filter: "blur(6px)" }}
-      whileInView={{ opacity: 1, x: 0, y: 0, filter: "blur(0px)" }}
+      style={{ willChange: "transform, opacity" }}
+      initial={{ opacity: 0, x: offset.x, y: offset.y }}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: false, margin: "0px 0px -10% 0px", amount: 0 }}
       transition={{
         type: "spring",
