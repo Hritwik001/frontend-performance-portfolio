@@ -12,6 +12,7 @@ export type CaseStudyMedia =
       poster?: string;
       label: string;
       caption: string;
+      muted?: boolean;
     };
 
 export type CaseStudyLink = {
@@ -74,6 +75,7 @@ export const caseStudies: CaseStudy[] = [
         poster: "/images/pathpilot/hero.png",
         label: "Product Walkthrough",
         caption: "Chat wizard, structured profile, ranked matches, and AI pitch in action.",
+        muted: true,
       },
       {
         type: "image",

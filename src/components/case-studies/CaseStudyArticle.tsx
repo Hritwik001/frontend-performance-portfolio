@@ -107,6 +107,7 @@ export function CaseStudyArticle({ study }: CaseStudyArticleProps) {
                 controls
                 preload="none"
                 poster={item.poster}
+                muted={item.muted}
                 className="w-full"
               />
             ) : (
