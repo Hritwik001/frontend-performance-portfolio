@@ -1,30 +1,30 @@
-# ⚡ Frontend Performance Portfolio
+# ⚡ Frontend Developer Portfolio
 
-A portfolio showcasing React.js & Next.js frontend performance engineering, optimization case studies, and production-quality frontend projects.
+A portfolio showcasing React.js & Next.js product engineering — full product builds, documented performance turnarounds, and production-quality frontend projects.
 
 🌐 Live Website:
-https://frontend-performance-portfolio.vercel.app
+https://hritwik-frontend-portfolio.vercel.app
 
 
 ## 📖 Overview
 
-This portfolio was built to showcase practical frontend performance engineering skills through real-world case studies and production-style applications.
+This portfolio showcases practical frontend engineering across the full product surface: new products built end-to-end, and existing ones turned around when they started to feel slow, through real-world case studies and production-style applications.
 
-Rather than listing technologies, the portfolio demonstrates how React.js and Next.js applications can be analyzed, optimized, and improved using modern frontend engineering practices.
+Rather than listing technologies, the portfolio demonstrates how React.js and Next.js interfaces are architected, built, and — where needed — profiled and optimized using modern frontend engineering practices.
 
-It serves as a central hub for my performance case studies, featured projects, and engineering approach.
+It serves as a central hub for my product builds, performance case studies, and engineering approach.
 
 
 ## ✨ Features
 
 - ⚡ Responsive portfolio
-- 📊 Frontend performance case studies
+- 🧩 Full product builds (AI product, ISP signup flow, kitchen ops dashboard)
+- 📊 Documented performance case studies
 - 🚀 React.js & Next.js specialization
 - 📱 Fully responsive design
 - 🎨 Clean modern UI
 - 🌙 Professional layout
 - 🔗 Direct project links
-- 📈 Performance-focused branding
 
 
 ## 🛠 Tech Stack
@@ -45,22 +45,24 @@ It serves as a central hub for my performance case studies, featured projects, a
 
 - Home
 - About
-- Featured Case Studies
-- Performance Investigations
-- Skills
+- Selected Work & Case Studies
+- Services
+- Process
 - Contact
 
 
 ## 🚀 Featured Projects
 
-- RevenuePulse
-- SupportDesk
-- Frontend Performance Case Studies
+- PathPilot AI — full-stack AI career-matching copilot
+- Nova Fiber — fiber ISP marketing site & signup wizard
+- KitchenFlow — kitchen operations dashboard
+- RevenuePulse — SaaS analytics performance turnaround
+- SupportDesk — enterprise ticketing performance turnaround
 
 
 ## 🌐 Live Demo
 
-https://frontend-performance-portfolio.vercel.app/
+https://hritwik-frontend-portfolio.vercel.app/
 
 
 ## 💻 Run Locally
@@ -77,7 +79,7 @@ npm run dev
 
 ## 🚀 Future Improvements
 
-- More performance investigations
+- Additional product builds
 - Additional production case studies
 - Technical blog integration
 - Dark mode
@@ -89,7 +91,7 @@ npm run dev
 
 LinkedIn: https://www.linkedin.com/in/hritwik-tiwary/
 
-Portfolio: https://frontend-performance-portfolio.vercel.app/
+Portfolio: https://hritwik-frontend-portfolio.vercel.app/
 
 GitHub: https://github.com/Hritwik001
 
