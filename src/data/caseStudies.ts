@@ -75,7 +75,6 @@ export const caseStudies: CaseStudy[] = [
         poster: "/images/pathpilot/hero.png",
         label: "Product Walkthrough",
         caption: "Chat wizard, structured profile, ranked matches, and AI pitch in action.",
-        muted: true,
       },
       {
         type: "image",
