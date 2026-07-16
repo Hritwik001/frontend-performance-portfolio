@@ -108,6 +108,11 @@ export const caseStudies: CaseStudy[] = [
         href: "https://github.com/Hritwik001/pathpilot-ai",
         variant: "secondary",
       },
+      {
+        label: "Product Case Study (PDF)",
+        href: "/case-studies/PathPilotAI_Product_Case_Study.pdf",
+        variant: "secondary",
+      },
     ],
     tags: ["React", "Next.js", "Google Gemini", "Supabase", "Framer Motion"],
   },
@@ -171,6 +176,11 @@ export const caseStudies: CaseStudy[] = [
       {
         label: "View on GitHub",
         href: "https://github.com/Hritwik001/nova-fiber",
+        variant: "secondary",
+      },
+      {
+        label: "Product Case Study (PDF)",
+        href: "/case-studies/NovaFiber_Product_Case_Study.pdf",
         variant: "secondary",
       },
     ],
