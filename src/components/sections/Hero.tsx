@@ -66,11 +66,29 @@ export function Hero() {
             </h2>
 
             <p className="mt-3 leading-7 text-[var(--text-secondary)]">
-              One product built from the ground up, and two documented React/Next.js performance
-              turnarounds, each validated with React Profiler data.
+              Three products built from the ground up, and two documented React/Next.js
+              performance turnarounds, each validated with React Profiler data.
             </p>
 
             <div className="mt-8 space-y-4">
+              <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-5">
+                <p className="text-sm text-[var(--text-muted)]">PathPilot AI</p>
+                <p className="mt-2 text-xl font-semibold">AI copilot, live</p>
+                <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
+                  An AI career-matching copilot — chat or resume in, ranked matches and a
+                  streamed pitch out, powered by real Gemini integration.
+                </p>
+              </div>
+
+              <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-5">
+                <p className="text-sm text-[var(--text-muted)]">Nova Fiber</p>
+                <p className="mt-2 text-xl font-semibold">5-step signup, built</p>
+                <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
+                  A fiber ISP marketing site and signup wizard — availability check, plans,
+                  scheduling, and account, in one continuous flow.
+                </p>
+              </div>
+
               <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-5">
                 <p className="text-sm text-[var(--text-muted)]">KitchenFlow</p>
                 <p className="mt-2 text-xl font-semibold">Built end-to-end</p>
@@ -104,7 +122,7 @@ export function Hero() {
         <div className="relative z-10 mt-20 border-t border-[var(--border)] pt-10">
           <div className="grid gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
             <Reveal className="motion-stat" delay={80}>
-              <p className="text-3xl font-bold">3 Case Studies</p>
+              <p className="text-3xl font-bold">5 Case Studies</p>
               <p className="mt-2 text-sm text-[var(--text-secondary)]">
                 Product Builds &amp; Performance Work
               </p>

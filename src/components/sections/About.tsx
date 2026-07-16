@@ -19,9 +19,9 @@ export function About() {
           <div className="space-y-5 text-[var(--text-secondary)]">
             <p className="leading-8">
               My work covers component architecture, state and data flow, interaction design, and
-              visual detail. Recent projects include a kitchen operations dashboard built from the
-              ground up (KitchenFlow) and performance turnarounds on SaaS analytics and ticketing
-              platforms.
+              visual detail. Recent projects include an AI career-matching copilot (PathPilot AI),
+              a fiber ISP signup experience (Nova Fiber), a kitchen operations dashboard
+              (KitchenFlow), and performance turnarounds on SaaS analytics and ticketing platforms.
             </p>
 
             <p className="leading-8">
