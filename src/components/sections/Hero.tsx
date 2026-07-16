@@ -16,7 +16,7 @@ export function Hero() {
       <div className="pointer-events-none absolute right-0 top-24 h-80 w-80 rounded-full bg-white/[0.04] blur-3xl" />
 
       <Container>
-        <div className="relative z-10 grid items-start gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="relative z-10 grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <Reveal direction="left">
             <Eyebrow>Frontend Engineer — React.js / Next.js</Eyebrow>
 
