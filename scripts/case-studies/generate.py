@@ -360,15 +360,6 @@ table.results td.metric-name {{ color: var(--text-primary); font-weight: 500; }}
   color: var(--text-secondary);
   margin-top: 3px;
 }}
-.footer-band .links {{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 6px 16px;
-  font-size: 0.78rem;
-  color: var(--text-secondary);
-}}
-.footer-band .links span {{ white-space: nowrap; }}
 .footer-band .rightcol {{ text-align: right; }}
 .footer-band .copyright {{
   font-size: 0.68rem;
@@ -455,7 +446,6 @@ def footer_band():
         <div class="tagline">Frontend engineering for React &amp; Next.js products.</div>
       </div>
       <div class="rightcol">
-        <div class="links"><span>hritwiktiwary001@gmail.com</span><span>linkedin.com/in/hritwik-tiwary</span><span>github.com/Hritwik001</span></div>
         <div class="copyright">&copy; 2026 Hritwik Tiwary. Built with Next.js.</div>
       </div>
     </div>
