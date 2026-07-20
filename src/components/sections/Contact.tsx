@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { FileText, Mail } from "lucide-react";
 
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
@@ -37,6 +37,18 @@ export function Contact() {
 
             <a href="https://github.com/Hritwik001" target="_blank" rel="noreferrer">
               <Button variant="secondary">GitHub</Button>
+            </a>
+
+            <a
+              href="/resume/Hritwik_Tiwary_Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open resume PDF in a new tab"
+            >
+              <Button variant="secondary">
+                <FileText className="mr-2 h-4 w-4" />
+                Resume
+              </Button>
             </a>
           </div>
         </Reveal>

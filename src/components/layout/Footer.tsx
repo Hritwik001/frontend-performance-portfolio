@@ -42,6 +42,15 @@ export function Footer() {
             >
               GitHub
             </a>
+
+            <a
+              href="/resume/Hritwik_Tiwary_Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-colors hover:text-white"
+            >
+              Resume
+            </a>
           </div>
         </div>
 

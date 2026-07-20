@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Hritwik Tiwary — UI Engineer Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #191919;
+    --ink-soft: #47443f;
+    --ink-mute: #8a8478;
+    --hair: #e6e0d2;
+    --panel: #f8f5ee;
+    --band: #16140f;
+    --band2: #221f18;
+    --gold: #93701f;
+    --gold-bright: #d6ad4e;
+    --gold-pale: #f3e3bb;
+    --cream: #f9f6ef;
+  }
+
+  html, body {
+    width: 210mm;
+    background: #ffffff;
+    color: var(--ink);
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.4;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .serif { font-family: 'Playfair Display', 'Georgia', serif; }
+
+  .page { width: 210mm; min-height: 297mm; position: relative; padding-bottom: 0; }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ================= HEADER / LETTERHEAD ================= */
+  .band {
+    background: linear-gradient(160deg, var(--band) 0%, var(--band2) 100%);
+    padding: 4mm 15mm 3mm 15mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .band::after {
+    content: "";
+    position: absolute;
+    right: -40px; top: -60px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(214,173,78,0.16), transparent 70%);
+  }
+  .idBlock { display: flex; align-items: center; gap: 12px; position: relative; z-index: 1; }
+  .monogram {
+    width: 13mm; height: 13mm;
+    flex: none;
+    border-radius: 50%;
+    border: 1.3px solid var(--gold-bright);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 12pt;
+    color: var(--gold-bright);
+    background: rgba(255,255,255,0.02);
+    letter-spacing: 0.5px;
+  }
+  .name {
+    font-size: 21.5pt;
+    font-weight: 700;
+    color: #fbf9f4;
+    letter-spacing: 0.3px;
+  }
+  .name .dot { color: var(--gold-bright); }
+  .role {
+    margin-top: 3px;
+    font-size: 9.3pt;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+  }
+  .headerRight {
+    text-align: right;
+    font-size: 8pt;
+    color: #d8d4c8;
+    line-height: 1.65;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+  }
+  .headerRight a { display: flex; align-items: center; justify-content: flex-end; gap: 5px; }
+  .headerRight a:hover { color: var(--gold-bright); }
+  .ic { width: 9px; height: 9px; flex: none; fill: var(--gold-bright); }
+  .goldRule {
+    height: 2.4px;
+    background: linear-gradient(90deg, var(--band) 0%, var(--gold-bright) 18%, var(--gold-pale) 50%, var(--gold-bright) 82%, var(--band) 100%);
+  }
+
+  .body { padding: 0.3mm 15mm 0 15mm; }
+
+  /* ================= SUMMARY ================= */
+  .summary {
+    font-size: 9.2pt;
+    color: var(--ink-soft);
+    line-height: 1.28;
+    position: relative;
+    padding-left: 22px;
+  }
+  .summary .drop {
+    position: absolute;
+    left: 0; top: -5px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 30pt;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .summary b { color: var(--ink); font-weight: 700; }
+
+  /* ================= STATS RIBBON ================= */
+  .ribbon {
+    margin-top: 3px;
+    background: var(--band);
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+  }
+  .stat {
+    padding: 2px 6px;
+    text-align: center;
+    position: relative;
+  }
+  .stat + .stat::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 14%;
+    width: 1px; height: 72%;
+    background: rgba(214,173,78,0.3);
+  }
+  .stat .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 13pt;
+    font-weight: 700;
+    color: var(--gold-bright);
+    white-space: nowrap;
+  }
+  .stat .lbl {
+    margin-top: 2px;
+    font-size: 6.4pt;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    color: #cfcabd;
+    font-weight: 600;
+  }
+
+  /* ================= SECTIONS ================= */
+  .section { margin-top: 1px; }
+  .sectionTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 11pt;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--ink);
+    margin-bottom: 2px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .sectionTitle::after { content: ""; flex: 1; height: 1px; background: var(--hair); transform: translateY(-3px); }
+  .sectionTitle .tick { width: 5px; height: 5px; background: var(--gold-bright); transform: rotate(45deg); flex: none; }
+
+  /* ---- experience ---- */
+  .jobHead { display: flex; justify-content: space-between; align-items: baseline; }
+  .jobTitle { font-size: 9.7pt; font-weight: 700; color: var(--ink); }
+  .jobTitle .co { color: var(--gold); }
+  .jobDate { font-size: 8pt; color: var(--ink-mute); font-weight: 600; white-space: nowrap; }
+  .jobSub { font-size: 8.3pt; color: var(--ink-mute); font-style: italic; margin-top: 0; margin-bottom: 0.5px; }
+  ul.bullets { list-style: none; }
+  ul.bullets li {
+    position: relative;
+    padding-left: 13px;
+    margin-bottom: 0;
+    font-size: 8.3pt;
+    color: var(--ink-soft);
+    line-height: 1.14;
+  }
+  ul.bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 5.5px;
+    width: 4.5px; height: 4.5px;
+    background: var(--gold-bright);
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+  }
+  ul.bullets li b { color: var(--ink); font-weight: 700; }
+
+  /* ---- projects ---- */
+  .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin-top: 1px; }
+  .projectFull { grid-column: 1 / -1; }
+  .card {
+    border: 1px solid var(--hair);
+    border-radius: 4px;
+    padding: 2px 8px 1.5px;
+    background: linear-gradient(180deg, #ffffff 0%, var(--cream) 100%);
+    position: relative;
+  }
+  .card::before {
+    content: "";
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 2.6px;
+    background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+    border-radius: 4px 0 0 4px;
+  }
+  .cardHead { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0; }
+  .cardTitle { font-size: 9.4pt; font-weight: 800; color: var(--ink); }
+  .cardTitle a:hover { color: var(--gold); }
+  .cardTag {
+    font-size: 6.4pt;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(135deg, var(--gold), #7a5c17);
+    padding: 2px 7px;
+    border-radius: 8px;
+    white-space: nowrap;
+  }
+  .cardDesc { font-size: 7.7pt; color: var(--ink-soft); line-height: 1.14; margin-bottom: 1.5px; }
+  .stackRow { display: flex; flex-wrap: wrap; gap: 3px; margin-bottom: 1.5px; }
+  .pill {
+    font-size: 6.8pt;
+    font-weight: 600;
+    color: var(--ink-soft);
+    background: var(--panel);
+    border: 1px solid var(--hair);
+    padding: 0.5px 6px;
+    border-radius: 8px;
+  }
+  .resultBadge {
+    display: inline-block;
+    margin-bottom: 2px;
+    font-size: 7.7pt;
+    font-weight: 700;
+    color: #7a5a17;
+    background: linear-gradient(135deg, #fff3d6, #f3dfa2);
+    border: 1px solid #dcb75f;
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+  .linkRow { display: flex; flex-wrap: wrap; gap: 10px; border-top: 1px dotted var(--hair); padding-top: 1.5px; }
+  .linkRow a {
+    font-size: 7.6pt;
+    font-weight: 700;
+    color: var(--gold);
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .linkRow a .arrow { font-size: 8.5pt; }
+  .linkRow a:hover { color: var(--ink); }
+
+  /* ---- skills ---- */
+  .skillGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px 22px; }
+  .skillRow { display: flex; gap: 6px; font-size: 8.2pt; padding: 0.5px 0; border-bottom: 1px dotted var(--hair); }
+  .skillRow .k { flex: none; width: 92px; font-weight: 700; color: var(--ink); }
+  .skillRow .k::before { content: "▪ "; color: var(--gold-bright); }
+  .skillRow .v { color: var(--ink-soft); }
+
+  /* ---- footer band ---- */
+  .footBand {
+    margin-top: 1px;
+    background: var(--band);
+    padding: 2.5px 15mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 7.8pt;
+    color: #cfcabd;
+  }
+  .footBand a { display: inline-flex; align-items: center; gap: 4px; }
+  .footBand a:hover { color: var(--gold-bright); }
+  .footBand .ic2 { width: 8px; height: 8px; fill: var(--gold-bright); }
+  .footBand .brand { color: var(--gold-bright); font-weight: 700; font-family: 'Playfair Display', serif; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- LETTERHEAD -->
+  <div class="band">
+    <div class="idBlock">
+      <div class="monogram">HT</div>
+      <div>
+        <div class="name serif">Hritwik Tiwary<span class="dot">.</span></div>
+        <div class="role">UI / Frontend Engineer &nbsp;·&nbsp; React &amp; Next.js Performance Specialist</div>
+      </div>
+    </div>
+    <div class="headerRight">
+      <a href="https://www.google.com/maps/place/Kolkata"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Kolkata, India · Remote</a>
+      <a href="mailto:hritwiktiwary001@gmail.com"><svg class="ic" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg>hritwiktiwary001@gmail.com</a>
+      <a href="https://www.linkedin.com/in/hritwik-tiwary/"><svg class="ic" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM8.3 18.3H5.7v-8.4h2.6zM7 8.8a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm11.3 9.5h-2.6v-4.5c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4v4.6H9.8v-8.4h2.5v1.1h.1c.4-.7 1.3-1.5 2.6-1.5 2.8 0 3.3 1.8 3.3 4.2z"/></svg>linkedin.com/in/hritwik-tiwary</a>
+      <a href="https://github.com/Hritwik001"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1-1.5-1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.5-1.3.1-2.7 0 0 .8-.3 2.7 1a9.3 9.3 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .6 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>github.com/Hritwik001</a>
+      <a href="https://hritwik-frontend-portfolio.vercel.app/"><svg class="ic" viewBox="0 0 24 24"><path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm0 2c1.4 0 2.7 3 3.2 7.5H8.8C9.3 6 10.6 3 12 3zM8.6 12.5h6.8c-.1 1.9-.4 3.6-.9 5H9.5c-.5-1.4-.8-3.1-.9-5zm.2-2c.1-1.9.4-3.6.9-5h4.6c.5 1.4.8 3.1.9 5zM7.5 5.6A9 9 0 0 0 4.1 10H7c.1-1.6.3-3.1.7-4.4zm9 0c.4 1.3.6 2.8.7 4.4h2.9a9 9 0 0 0-3.4-4.4zM4.1 12.5h2.9c.1 1.6.3 3.1.7 4.4a9 9 0 0 1-3.6-4.4zm15.8 0h-2.9c-.1 1.6-.3 3.1-.7 4.4a9 9 0 0 0 3.6-4.4zM9.3 19c.9.9 1.7 1.6 2.7 1.9 1-.3 1.8-1 2.7-1.9-.9.2-1.8.4-2.7.4s-1.8-.2-2.7-.4z"/></svg>hritwik-frontend-portfolio.vercel.app</a>
+    </div>
+  </div>
+  <div class="goldRule"></div>
+
+  <div class="body">
+
+    <!-- SUMMARY -->
+    <div class="summary"><span class="drop">F</span>rontend / UI Engineer with <b>3+ years</b> of professional experience at <b>EY</b> designing, building, and optimizing
+      React &amp; TypeScript interfaces for enterprise and SaaS products. Specializes in translating complex business
+      requirements into responsive, accessible UI architecture, and in profiling &amp; eliminating rendering bottlenecks
+      using React Profiler, Chrome DevTools, and Core Web Vitals. Comfortable owning a component from architecture through
+      code review, and communicating technical trade-offs clearly across product, design, and engineering.
+    </div>
+
+    <!-- STATS -->
+    <div class="ribbon">
+      <div class="stat"><div class="num">3.5+ yrs</div><div class="lbl">React &amp; Next.js Experience</div></div>
+      <div class="stat"><div class="num">3675→2.3ms</div><div class="lbl">Best Render Optimization</div></div>
+      <div class="stat"><div class="num">2000→140ms</div><div class="lbl">SaaS Dashboard Optimization</div></div>
+      <div class="stat"><div class="num">100/100/100</div><div class="lbl">Lighthouse Score Shipped</div></div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+      <div class="sectionTitle"><span class="tick"></span>Experience</div>
+      <div class="jobHead">
+        <div class="jobTitle">Software Engineer, Frontend <span class="co">— EY</span></div>
+        <div class="jobDate">Jan 2023 – Jun 2026 · Kolkata, India</div>
+      </div>
+      <div class="jobSub">Frontend Practice — React.js &amp; Next.js, Enterprise &amp; SaaS Products</div>
+      <ul class="bullets">
+        <li><b>Designed, developed, and shipped</b> new UI features and reusable React/Next.js components across enterprise and SaaS products, from requirements through production release.</li>
+        <li>Collaborated with product and design teams to translate requirements into responsive, accessible interfaces.</li>
+        <li>Audited apps with Chrome DevTools, React DevTools, and Lighthouse to diagnose and fix rendering bottlenecks end-to-end.</li>
+        <li>Improved rendering via <b>component restructuring</b> and memoization (useMemo, useCallback, useDeferredValue); cut JS payloads with <b>code-splitting</b>.</li>
+        <li>Re-engineered enterprise dashboards' search, filtering, table rendering, pagination, and virtualization for 10,000+ record datasets.</li>
+        <li>Analyzed Core Web Vitals and partnered cross-functionally to improve load performance, interaction responsiveness, and layout stability.</li>
+        <li>Reproduced and root-caused customer-reported performance issues; documented findings and recommendations for engineering stakeholders.</li>
+        <li>Participated in architecture and code reviews; <b>mentored junior engineers</b> on frontend development and profiling workflows.</li>
+      </ul>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section">
+      <div class="sectionTitle"><span class="tick"></span>Selected Work &amp; Case Studies</div>
+      <div class="projects">
+        <div class="card projectFull">
+          <div class="cardHead">
+            <div class="cardTitle"><a href="https://hritwik-frontend-portfolio.vercel.app/" target="_blank">Frontend Performance Portfolio — Personal Portfolio Site ↗</a></div>
+            <div class="cardTag">Portfolio Site</div>
+          </div>
+          <div class="cardDesc">Designed and built this portfolio end-to-end — animated case-study system covering five shipped products, Framer Motion micro-interactions, and a performance-tuned Next.js 16 architecture aimed at near-perfect Lighthouse scores.</div>
+          <div class="stackRow"><span class="pill">Next.js 16</span><span class="pill">React 19</span><span class="pill">TypeScript</span><span class="pill">Tailwind CSS</span><span class="pill">Framer Motion</span></div>
+          <div class="linkRow">
+            <a href="https://hritwik-frontend-portfolio.vercel.app/" target="_blank"><span class="arrow">▸</span>Live Demo</a>
+            <a href="https://github.com/Hritwik001/frontend-performance-portfolio" target="_blank"><span class="arrow">▸</span>GitHub Repo</a>
+          </div>
+        </div>
+
+        <div class="card projectFull">
+          <div class="cardHead">
+            <div class="cardTitle"><a href="https://pathpilot-ai-iota.vercel.app/" target="_blank">PathPilot AI — Full-Stack AI Product ↗</a></div>
+            <div class="cardTag">AI Product</div>
+          </div>
+          <div class="cardDesc">Built an AI career-matching copilot end-to-end — chat or resume intake, Gemini-ranked role matches with plain-English reasoning, AI-drafted outreach pitches, Supabase auth with Realtime status streaming, and a Framer Motion/GSAP animation layer.</div>
+          <div class="stackRow"><span class="pill">Next.js 16</span><span class="pill">React 19</span><span class="pill">Gemini AI</span><span class="pill">Supabase</span><span class="pill">Framer Motion</span></div>
+          <div class="linkRow">
+            <a href="https://pathpilot-ai-iota.vercel.app/" target="_blank"><span class="arrow">▸</span>Live Demo</a>
+            <a href="https://cdn.jsdelivr.net/gh/Hritwik001/pathpilot-ai@main/demo/pathpilot-ai-demo.mp4" target="_blank"><span class="arrow">▸</span>Demo Video</a>
+            <a href="https://github.com/Hritwik001/pathpilot-ai" target="_blank"><span class="arrow">▸</span>GitHub Repo</a>
+          </div>
+        </div>
+
+        <div class="card projectFull">
+          <div class="cardHead">
+            <div class="cardTitle"><a href="https://home-internet-onboarding.vercel.app" target="_blank">Nova Fiber — ISP Onboarding &amp; Signup ↗</a></div>
+            <div class="cardTag">Product UI</div>
+          </div>
+          <div class="cardDesc">Designed and built a fiber ISP marketing site paired with a five-step signup wizard — address availability check, plan &amp; add-on selection, install scheduling, account creation, and order confirmation — as one continuous, single-session flow.</div>
+          <div class="stackRow"><span class="pill">React</span><span class="pill">TypeScript</span><span class="pill">Vite</span><span class="pill">Tailwind CSS</span><span class="pill">Framer Motion</span></div>
+          <div class="linkRow">
+            <a href="https://home-internet-onboarding.vercel.app" target="_blank"><span class="arrow">▸</span>Live Demo</a>
+            <a href="https://hritwik-frontend-portfolio.vercel.app/videos/nova-fiber-demo.mp4" target="_blank"><span class="arrow">▸</span>Demo Video</a>
+            <a href="https://hritwik-frontend-portfolio.vercel.app/case-studies/NovaFiber_Product_Case_Study.pdf" target="_blank"><span class="arrow">▸</span>Case Study PDF</a>
+            <a href="https://github.com/Hritwik001/nova-fiber" target="_blank"><span class="arrow">▸</span>GitHub Repo</a>
+          </div>
+        </div>
+
+        <div class="card projectFull">
+          <div class="cardHead">
+            <div class="cardTitle"><a href="https://kitchen-flow-liard.vercel.app" target="_blank">KitchenFlow — Full Product Build ↗</a></div>
+            <div class="cardTag">Product UI</div>
+          </div>
+          <div class="cardDesc">Designed and built a 6-module kitchen operations dashboard from the ground up — live ticket board (New → Fire → Plating → Ready), ticket detail panel, station load intelligence, crew management, and service analytics.</div>
+          <div class="stackRow"><span class="pill">React</span><span class="pill">Next.js</span><span class="pill">TypeScript</span><span class="pill">Tailwind CSS</span></div>
+          <div class="linkRow">
+            <a href="https://kitchen-flow-liard.vercel.app" target="_blank"><span class="arrow">▸</span>Live Demo</a>
+            <a href="https://hritwik-frontend-portfolio.vercel.app/videos/kitchenflow-demo.mp4" target="_blank"><span class="arrow">▸</span>Demo Video</a>
+            <a href="https://hritwik-frontend-portfolio.vercel.app/case-studies/KitchenFlow_Product_Case_Study.pdf" target="_blank"><span class="arrow">▸</span>Case Study PDF</a>
+            <a href="https://github.com/Hritwik001/KitchenFlow" target="_blank"><span class="arrow">▸</span>GitHub Repo</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardHead">
+            <div class="cardTitle"><a href="https://hritwik-frontend-portfolio.vercel.app/case-studies/RevenuePulse_Performance_Case_Study.pdf" target="_blank">RevenuePulse ↗</a></div>
+            <div class="cardTag">Performance</div>
+          </div>
+          <div class="cardDesc">Diagnosed and resolved rendering bottlenecks in a SaaS revenue analytics dashboard's KPI loading and chart rendering.</div>
+          <div class="stackRow"><span class="pill">React Profiler</span><span class="pill">useMemo</span><span class="pill">useDeferredValue</span></div>
+          <div class="resultBadge">⚡ 2000ms → 140ms render time</div>
+          <div class="linkRow">
+            <a href="https://hritwik-frontend-portfolio.vercel.app/case-studies/RevenuePulse_Performance_Case_Study.pdf" target="_blank"><span class="arrow">▸</span>Case Study PDF</a>
+            <a href="https://drive.google.com/file/d/1GBauEmln7Z4Mu3KuQSTaLvDPmEOv8Hu7/view" target="_blank"><span class="arrow">▸</span>Demo Video</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardHead">
+            <div class="cardTitle"><a href="https://hritwik-frontend-portfolio.vercel.app/case-studies/SupportDesk_Performance_Case_Study.pdf" target="_blank">SupportDesk ↗</a></div>
+            <div class="cardTag">Performance</div>
+          </div>
+          <div class="cardDesc">Optimized an enterprise ticketing platform's search, filtering, and table rendering across 10,000+ ticket records.</div>
+          <div class="stackRow"><span class="pill">Debounced Search</span><span class="pill">Pagination</span><span class="pill">Memoization</span></div>
+          <div class="resultBadge">⚡ 3675ms → 2.3ms render time</div>
+          <div class="linkRow">
+            <a href="https://hritwik-frontend-portfolio.vercel.app/case-studies/SupportDesk_Performance_Case_Study.pdf" target="_blank"><span class="arrow">▸</span>Case Study PDF</a>
+            <a href="https://drive.google.com/file/d/1XurDFOQUs8Hdh220oKKPE6IaVcbgg4Yp/view" target="_blank"><span class="arrow">▸</span>Demo Video</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section">
+      <div class="sectionTitle"><span class="tick"></span>Skills &amp; Tools</div>
+      <div class="skillGrid">
+        <div class="skillRow"><div class="k">Languages</div><div class="v">JavaScript (ES6+), TypeScript, HTML5, CSS3</div></div>
+        <div class="skillRow"><div class="k">Frameworks</div><div class="v">React.js, Next.js, Redux Toolkit</div></div>
+        <div class="skillRow"><div class="k">Styling / UI</div><div class="v">Tailwind CSS, Component-Driven Development, Design Systems</div></div>
+        <div class="skillRow"><div class="k">Performance</div><div class="v">React Profiler, Core Web Vitals, Code Splitting, Memoization</div></div>
+        <div class="skillRow"><div class="k">Tooling</div><div class="v">Chrome DevTools, Lighthouse, Git, REST APIs, Supabase</div></div>
+        <div class="skillRow"><div class="k">Practices</div><div class="v">Agile/Scrum, Accessibility (WCAG), Cross-Browser Compatibility, Code Review, Mentoring</div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER LETTERHEAD -->
+  <div class="footBand">
+    <span class="brand">Hritwik Tiwary.</span>
+    <a href="https://hritwik-frontend-portfolio.vercel.app/"><svg class="ic2" viewBox="0 0 24 24"><path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm0 2c1.4 0 2.7 3 3.2 7.5H8.8C9.3 6 10.6 3 12 3zM8.6 12.5h6.8c-.1 1.9-.4 3.6-.9 5H9.5c-.5-1.4-.8-3.1-.9-5zm.2-2c.1-1.9.4-3.6.9-5h4.6c.5 1.4.8 3.1.9 5zM7.5 5.6A9 9 0 0 0 4.1 10H7c.1-1.6.3-3.1.7-4.4zm9 0c.4 1.3.6 2.8.7 4.4h2.9a9 9 0 0 0-3.4-4.4zM4.1 12.5h2.9c.1 1.6.3 3.1.7 4.4a9 9 0 0 1-3.6-4.4zm15.8 0h-2.9c-.1 1.6-.3 3.1-.7 4.4a9 9 0 0 0 3.6-4.4zM9.3 19c.9.9 1.7 1.6 2.7 1.9 1-.3 1.8-1 2.7-1.9-.9.2-1.8.4-2.7.4s-1.8-.2-2.7-.4z"/></svg>Full portfolio &amp; live case studies — hritwik-frontend-portfolio.vercel.app</a>
+    <span>References available on request</span>
+  </div>
+
+</div>
+</body>
+</html>

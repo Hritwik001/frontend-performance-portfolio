@@ -43,7 +43,15 @@ export function Navbar() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden md:block">
+          <div className="hidden items-center gap-3 md:flex">
+            <a
+              href="/resume/Hritwik_Tiwary_Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open resume PDF in a new tab"
+            >
+              <Button variant="secondary">Resume</Button>
+            </a>
             <a href="#contact" aria-label="Go to contact section">
               <Button>Let&apos;s Talk</Button>
             </a>
@@ -82,6 +90,18 @@ export function Navbar() {
                     {item.label}
                   </a>
                 ))}
+
+                <a
+                  href="/resume/Hritwik_Tiwary_Resume.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  aria-label="Open resume PDF in a new tab"
+                >
+                  <Button variant="secondary" className="mt-2 w-full">
+                    Resume
+                  </Button>
+                </a>
 
                 <a
                   href="#contact"
