@@ -1,54 +1,7 @@
-import Link from "next/link";
-
 import { Container } from "@/components/layout/Container";
 
 export function Footer() {
-  return (
-    <footer className="border-t border-[var(--border)] py-10">
-      <Container>
-        <div className="flex flex-col gap-6 text-sm text-[var(--text-secondary)] md:flex-row md:items-center md:justify-between">
-          <div>
-            <Link href="/" className="font-semibold text-white">
-              Hritwik<span className="text-[var(--accent)]">.</span>
-            </Link>
-
-            <p className="mt-2">
-              Frontend Performance Engineering for React & Next.js applications.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap gap-5">
-            <a
-              href="mailto:hritwiktiwary001@gmail.com"
-              className="transition-colors hover:text-white"
-            >
-              Email
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/hritwik-tiwary/"
-              target="_blank"
-              rel="noreferrer"
-              className="transition-colors hover:text-white"
-            >
-              LinkedIn
-            </a>
-
-            <a
-              href="https://github.com/Hritwik001"
-              target="_blank"
-              rel="noreferrer"
-              className="transition-colors hover:text-white"
-            >
-              GitHub
-            </a>
-          </div>
-        </div>
-
-        <p className="mt-8 text-xs text-[var(--text-muted)]">
-          © 2026 Hritwik Tiwary. Built with Next.js.
-        </p>
-      </Container>
-    </footer>
-  );
+  return <footer id="contact" className="bg-[var(--wine-deep)] py-14 text-[var(--cream)]">
+    <Container><div className="flex flex-col gap-12 md:flex-row md:items-end md:justify-between"><div><p className="tango-logo text-3xl">my tango <i>events</i></p><p className="mt-4 max-w-sm leading-7 text-white/60">A better way to discover the places, people, and moments that make tango feel like tango.</p></div><nav className="flex flex-wrap gap-x-7 gap-y-3 text-sm text-white/70"><a href="#features">Discover</a><a href="#organizers">For organizers</a><a href="#">About</a><a href="#">FAQ</a><a href="#">Privacy</a><a href="#">Terms</a></nav></div><div className="mt-14 flex flex-col gap-3 border-t border-white/15 pt-6 text-xs text-white/45 sm:flex-row sm:justify-between"><span>© 2026 My Tango Events. A concept website.</span><span>Made with a little more feeling.</span></div></Container>
+  </footer>;
 }

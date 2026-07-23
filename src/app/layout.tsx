@@ -1,40 +1,30 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Hritwik Tiwary | React & Next.js Performance Engineer",
+  metadataBase: new URL("https://hritwik-frontend-portfolio.vercel.app"),
+  title: "My Tango Events | Find your next dance",
   description:
-    "Frontend performance engineering for React and Next.js applications. Case studies in dashboard optimization, React Profiler analysis, Core Web Vitals, and measurable performance improvements.",
+    "Discover Argentine tango events worldwide. Find milongas, festivals, and workshops, or share your own event with a global dance community.",
   openGraph: {
-    title: "Hritwik Tiwary | React & Next.js Performance Engineer",
+    title: "My Tango Events | Find your next dance",
     description:
-      "Documented React and Next.js performance case studies with measurable frontend optimization results.",
+      "Discover Argentine tango events worldwide.",
     type: "website",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Hritwik Tiwary React and Next.js Performance Portfolio",
+        alt: "My Tango Events",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hritwik Tiwary | React & Next.js Performance Engineer",
+    title: "My Tango Events | Find your next dance",
     description:
-      "Frontend performance engineering for React and Next.js applications.",
+      "Discover Argentine tango events worldwide.",
     images: ["/og-image.png"],
   },
 };
@@ -47,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className="h-full antialiased"
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

@@ -1,55 +1,20 @@
+import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/layout/Container";
-import { Section } from "@/components/layout/Section";
 import { Reveal } from "@/components/motion/Reveal";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function About() {
-  return (
-    <Section id="about">
-      <Container>
-        <Reveal className="motion-card grid gap-10 rounded-[var(--radius-xl)] border border-[var(--border)] bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-8 shadow-2xl shadow-black/25 transition-all duration-300 hover:border-[var(--accent)] hover:shadow-[0_0_50px_rgba(245,197,66,0.10)] lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:p-10">
-          <div>
-            <SectionHeading
-              eyebrow="About"
-              title="Frontend Performance Engineer specializing in React & Next.js."
-              description="I work on performance-heavy frontend applications where rendering efficiency, dashboard responsiveness, Core Web Vitals, and real user experience matter."
-            />
-          </div>
-
-          <div className="space-y-5 text-[var(--text-secondary)]">
-            <p className="leading-8">
-              I specialize in improving React and Next.js applications used in SaaS products and
-              enterprise platforms. My work focuses on identifying rendering bottlenecks, reducing
-              unnecessary re-renders, optimizing dashboard interactions, and making complex
-              interfaces feel faster for real users.
-            </p>
-
-            <p className="leading-8">
-              I approach frontend performance as an engineering investigation: measure the current
-              state, identify the highest-impact bottlenecks, implement targeted improvements, and
-              validate the results using tools like React Profiler, Chrome DevTools, Lighthouse, and
-              Core Web Vitals.
-            </p>
-
-            <div className="grid gap-4 pt-4 sm:grid-cols-3">
-              <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-4">
-                <p className="text-sm text-[var(--text-muted)]">Primary Stack</p>
-                <p className="mt-2 font-semibold text-white">React • Next.js</p>
-              </div>
-
-              <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-4">
-                <p className="text-sm text-[var(--text-muted)]">Focus Areas</p>
-                <p className="mt-2 font-semibold text-white">Rendering • CWV</p>
-              </div>
-
-              <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-4">
-                <p className="text-sm text-[var(--text-muted)]">Tooling</p>
-                <p className="mt-2 font-semibold text-white">Profiler • DevTools</p>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </Container>
-    </Section>
-  );
+  return <section id="organizers" className="tango-organizers relative overflow-hidden py-24 sm:py-32">
+    <Container className="relative z-10">
+      <Reveal className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+        <p className="tango-kicker">For organizers</p>
+        <div><h2 className="tango-display text-5xl leading-[0.94] sm:text-6xl">Your event deserves <em>an audience in motion.</em></h2>
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-[var(--ink-soft)]">Bring your milonga, festival, or workshop to the dancers searching for their next unforgettable night. My Tango Events makes it simple to be found.</p>
+          <a className="tango-button mt-10" href="#contact">List your event <ArrowUpRight size={18} /></a>
+        </div>
+      </Reveal>
+      <Reveal delay={150} className="organizer-stats mt-20 grid gap-6 border-t border-white/15 pt-8 sm:grid-cols-3">
+        <div><strong>One place</strong><span>to share what you&apos;re creating</span></div><div><strong>Global reach</strong><span>for a global dance community</span></div><div><strong>Simple tools</strong><span>built around real organizers</span></div>
+      </Reveal>
+    </Container><div className="organizer-mark" aria-hidden="true">MTE</div>
+  </section>;
 }

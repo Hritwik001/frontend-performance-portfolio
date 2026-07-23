@@ -1,97 +1,62 @@
-# ⚡ Frontend Performance Portfolio
+# My Tango Events
 
-A portfolio showcasing React.js & Next.js frontend performance engineering, optimization case studies, and production-quality frontend projects.
+A visually rich, responsive marketing website concept for a global Argentine tango events platform. Built as a portfolio project to demonstrate editorial UI design, accessible interaction patterns, and performant modern frontend implementation.
 
-🌐 Live Website:
-https://frontend-performance-portfolio.vercel.app
+**[View the live demo →](https://hritwik-frontend-portfolio.vercel.app)**
 
+## Project highlights
 
-## 📖 Overview
+- Bold editorial art direction inspired by tango: warm wine tones, cream, and gold
+- Abstract CSS hero artwork and lightweight ambient motion, with reduced-motion support
+- Responsive landing experience for dancers and event organizers
+- Interactive event exploration: category filters, text search, and save/unsave states
+- Semantic, keyboard-accessible controls and carefully structured TypeScript components
+- SEO metadata and Open Graph configuration
 
-This portfolio was built to showcase practical frontend performance engineering skills through real-world case studies and production-style applications.
+## Built with
 
-Rather than listing technologies, the portfolio demonstrates how React.js and Next.js applications can be analyzed, optimized, and improved using modern frontend engineering practices.
-
-It serves as a central hub for my performance case studies, featured projects, and engineering approach.
-
-
-## ✨ Features
-
-- ⚡ Responsive portfolio
-- 📊 Frontend performance case studies
-- 🚀 React.js & Next.js specialization
-- 📱 Fully responsive design
-- 🎨 Clean modern UI
-- 🌙 Professional layout
-- 🔗 Direct project links
-- 📈 Performance-focused branding
-
-
-## 🛠 Tech Stack
-
-### Frontend
-
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-
-### Deployment
-
+- Next.js 16 (App Router)
+- React 19 + TypeScript
+- Tailwind CSS 4
+- Lucide icons
+- CSS animations and Intersection Observer reveals
 - Vercel
 
+## Product concept
 
-## 📂 Portfolio Sections
+My Tango Events helps dancers discover milongas, festivals, and workshops worldwide, while giving organizers a compelling way to surface their events.
 
-- Home
-- About
-- Featured Case Studies
-- Performance Investigations
-- Skills
-- Contact
+This is a frontend concept project: event data and saved states are intentionally local/demo-only, with no backend required.
 
-
-## 🚀 Featured Projects
-
-- RevenuePulse
-- SupportDesk
-- Frontend Performance Case Studies
-
-
-## 🌐 Live Demo
-
-https://frontend-performance-portfolio.vercel.app/
-
-
-## 💻 Run Locally
+## Run locally
 
 ```bash
 git clone https://github.com/Hritwik001/frontend-performance-portfolio.git
-
 cd frontend-performance-portfolio
-
 npm install
-
 npm run dev
 ```
 
-## 🚀 Future Improvements
+Open [http://localhost:3000](http://localhost:3000).
 
-- More performance investigations
-- Additional production case studies
-- Technical blog integration
-- Dark mode
-- Advanced animations
-- More optimization walkthroughs
+## Scripts
 
+```bash
+npm run dev    # local development
+npm run build  # production build
+npm run start  # serve the production build
+npm run lint   # lint the project
+```
 
-## 📬 Contact
+## Live deployment
 
-LinkedIn: https://www.linkedin.com/in/hritwik-tiwary/
+The project is deployed on Vercel:
 
-Portfolio: https://frontend-performance-portfolio.vercel.app/
+<https://hritwik-frontend-portfolio.vercel.app>
 
-GitHub: https://github.com/Hritwik001
+## Author
 
-Email: hritwiktiwary001@gmail.com
+Hritwik Tiwary
 
+- [GitHub](https://github.com/Hritwik001)
+- [LinkedIn](https://www.linkedin.com/in/hritwik-tiwary/)
