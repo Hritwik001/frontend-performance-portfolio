@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
-  --background-soft: #111111;
-  --surface: #171717;
-  --surface-elevated: #1f1f1f;
+  --background: #0a0908;
+  --background-soft: #121110;
+  --surface: #18160f;
+  --surface-elevated: #201d14;
 
   --text-primary: #ffffff;
   --text-secondary: #a3a3a3;
@@ -15,6 +15,8 @@
 
   --accent: #f5c542;
   --accent-soft: rgba(245, 197, 66, 0.12);
+  --accent-shine: #fff3d0;
+  --accent-deep: #c9922a;
 
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
@@ -36,7 +38,9 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(245, 197, 66, 0.08), transparent 32rem),
+    radial-gradient(circle at top left, rgba(245, 197, 66, 0.10), transparent 34rem),
+    radial-gradient(circle at bottom right, rgba(245, 197, 66, 0.07), transparent 40rem),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.018) 0%, transparent 45%, rgba(245, 197, 66, 0.02) 75%, transparent 100%),
     var(--background);
   color: var(--text-primary);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
@@ -109,6 +113,63 @@ a {
 
 .motion-stat:hover {
   transform: translateY(-3px);
+}
+
+.text-gold-shine {
+  background: linear-gradient(
+    100deg,
+    var(--accent) 0%,
+    var(--accent-shine) 40%,
+    var(--accent) 60%,
+    var(--accent-deep) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gold-shine-drift 7s ease-in-out infinite;
+}
+
+@keyframes gold-shine-drift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.55) 48%,
+    transparent 66%
+  );
+  background-size: 220% 100%;
+  background-position: 200% 0;
+  animation: btn-shine-sweep 4.2s ease-in-out infinite;
+}
+
+@keyframes btn-shine-sweep {
+  0%,
+  55% {
+    background-position: 200% 0;
+  }
+  85%,
+  100% {
+    background-position: -40% 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -14,11 +14,11 @@ export function Button({
   ...props
 }: ButtonProps) {
   const base =
-  "inline-flex cursor-pointer select-none items-center justify-center rounded-[var(--radius-md)] px-6 py-3 text-sm font-medium transition-all duration-300";
+  "relative inline-flex cursor-pointer select-none items-center justify-center overflow-hidden rounded-[var(--radius-md)] px-6 py-3 text-sm font-medium transition-all duration-300";
 
   const variants = {
     primary:
-      "bg-[var(--accent)] text-black hover:scale-[1.02] hover:shadow-lg hover:shadow-yellow-500/20",
+      "btn-shine bg-[var(--accent)] text-black hover:scale-[1.02] hover:shadow-lg hover:shadow-yellow-500/20",
 
     secondary:
       "border border-[var(--border-strong)] bg-transparent text-white hover:bg-white/5",
@@ -29,7 +29,7 @@ export function Button({
       className={`${base} ${variants[variant]} ${className}`}
       {...props}
     >
-      {children}
+      <span className="relative z-10 inline-flex items-center">{children}</span>
     </button>
   );
 }

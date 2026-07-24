@@ -57,7 +57,7 @@ export function CaseStudyArticle({ study }: CaseStudyArticleProps) {
                 className="h-full rounded-full bg-[var(--accent)]"
                 initial={{ width: 0 }}
                 whileInView={{ width: `${study.performance.barPercent}%` }}
-                viewport={{ once: false, amount: 0.6 }}
+                viewport={{ once: true, amount: 0.6 }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
               />
             </div>
@@ -69,9 +69,12 @@ export function CaseStudyArticle({ study }: CaseStudyArticleProps) {
         ) : (
           <div className="rounded-[var(--radius-xl)] border border-[var(--border)] bg-black/40 p-6">
             <p className="text-sm text-[var(--text-muted)]">Scope</p>
-            <p className="mt-2 text-3xl font-bold text-[var(--accent)]">Full product</p>
+            <p className="mt-2 text-3xl font-bold text-[var(--accent)]">
+              {study.scope?.value ?? "Full product"}
+            </p>
             <p className="mt-4 text-sm leading-6 text-[var(--text-secondary)]">
-              Architecture, state, UI, and motion, designed and built as one connected system.
+              {study.scope?.note ??
+                "Architecture, state, UI, and motion, designed and built as one connected system."}
             </p>
           </div>
         )}

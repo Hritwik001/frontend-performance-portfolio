@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/motion/Reveal";
+import { TextReveal } from "@/components/motion/TextReveal";
 
 import { Eyebrow } from "./typography/Eyebrow";
 import { Heading } from "./typography/Heading";
@@ -23,7 +24,9 @@ export function SectionHeading({
     <Reveal className={`max-w-3xl ${alignment}`}>
       <Eyebrow>{eyebrow}</Eyebrow>
 
-      <Heading className="mt-4">{title}</Heading>
+      <Heading className="mt-4">
+        <TextReveal text={title} />
+      </Heading>
 
       <Text className="mt-6">{description}</Text>
     </Reveal>

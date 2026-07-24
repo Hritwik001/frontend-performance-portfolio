@@ -3,6 +3,7 @@ import { FileText, Mail } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Reveal } from "@/components/motion/Reveal";
+import { TextReveal } from "@/components/motion/TextReveal";
 import { Button } from "@/components/ui/Button";
 
 export function Contact() {
@@ -15,7 +16,7 @@ export function Contact() {
           </p>
 
           <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-            Let’s talk about the work.
+            <TextReveal text="Let’s talk about the work." />
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl leading-8 text-[var(--text-secondary)]">

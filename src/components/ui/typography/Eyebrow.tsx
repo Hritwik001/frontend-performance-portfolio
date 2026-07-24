@@ -11,7 +11,7 @@ export function Eyebrow({
 }: EyebrowProps) {
   return (
     <span
-      className={`text-sm font-medium uppercase tracking-[0.2em] text-[var(--accent)] ${className}`}
+      className={`text-gold-shine text-sm font-medium uppercase tracking-[0.2em] ${className}`}
     >
       {children}
     </span>

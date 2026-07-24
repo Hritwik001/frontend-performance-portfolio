@@ -2,18 +2,68 @@ import { ArrowRight } from "lucide-react";
 
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
+import { CornerGlow } from "@/components/motion/CornerGlow";
 import { Reveal } from "@/components/motion/Reveal";
+import { TextReveal } from "@/components/motion/TextReveal";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/typography/Eyebrow";
 import { Heading } from "@/components/ui/typography/Heading";
 import { Text } from "@/components/ui/typography/Text";
 
+const recentWork = [
+  {
+    label: "PathPilot AI",
+    headline: "AI copilot, live",
+    description:
+      "An AI career-matching copilot — chat or resume in, ranked matches and a streamed pitch out, powered by real Gemini integration.",
+  },
+  {
+    label: "Nova Fiber",
+    headline: "5-step signup, built",
+    description:
+      "A fiber ISP marketing site and signup wizard — availability check, plans, scheduling, and account, in one continuous flow.",
+  },
+  {
+    label: "My Tango Events",
+    headline: "Design concept, built",
+    description:
+      "An editorial tango events landing page — category filters, live search, and save states, with no backend behind it.",
+  },
+  {
+    label: "KitchenFlow",
+    headline: "Built end-to-end",
+    description:
+      "A six-module kitchen operations dashboard — live ticket board, station load, crew, and service analytics.",
+  },
+  {
+    label: "SupportDesk",
+    headline: "3675ms → 2.3ms",
+    description:
+      "Ticketing dashboard optimized for search, filtering, rendering workload, pagination and responsiveness.",
+  },
+  {
+    label: "RevenuePulse",
+    headline: "2000ms → 140ms",
+    description:
+      "SaaS analytics dashboard optimized for KPI loading, chart rendering, search, filtering and dashboard responsiveness.",
+  },
+];
+
 export function Hero() {
   return (
     <Section className="relative overflow-hidden pt-24 sm:pt-28 lg:pt-32">
-      <div className="pointer-events-none absolute left-1/2 top-0 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-[var(--accent-soft)] blur-3xl" />
-      <div className="pointer-events-none absolute right-0 top-24 h-80 w-80 rounded-full bg-white/[0.04] blur-3xl" />
+      <CornerGlow
+        className="left-1/2 top-0 -ml-64 h-[32rem] w-[32rem] bg-[var(--accent-soft)]"
+        fromX={-70}
+        fromY={-70}
+      />
+      <CornerGlow
+        className="right-0 top-24 h-80 w-80 bg-white/[0.04]"
+        fromX={70}
+        fromY={-70}
+        delay={120}
+      />
 
       <Container>
         <div className="relative z-10 grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
@@ -21,7 +71,7 @@ export function Hero() {
             <Eyebrow>Frontend Engineer — React.js / Next.js</Eyebrow>
 
             <Heading className="mt-5 max-w-4xl">
-              Frontend engineering for products that feel as good as they look.
+              <TextReveal text="Frontend engineering for products that feel as good as they look." />
             </Heading>
 
             <Text className="mt-6 max-w-3xl">
@@ -66,55 +116,22 @@ export function Hero() {
             </h2>
 
             <p className="mt-3 leading-7 text-[var(--text-secondary)]">
-              Three products built from the ground up, and two documented React/Next.js
-              performance turnarounds, each validated with React Profiler data.
+              Three products built from the ground up, two documented React/Next.js
+              performance turnarounds, and a design-led concept, each shipped with real detail.
             </p>
 
             <div className="mt-8 space-y-4">
-              <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-5">
-                <p className="text-sm text-[var(--text-muted)]">PathPilot AI</p>
-                <p className="mt-2 text-xl font-semibold">AI copilot, live</p>
-                <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
-                  An AI career-matching copilot — chat or resume in, ranked matches and a
-                  streamed pitch out, powered by real Gemini integration.
-                </p>
-              </div>
-
-              <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-5">
-                <p className="text-sm text-[var(--text-muted)]">Nova Fiber</p>
-                <p className="mt-2 text-xl font-semibold">5-step signup, built</p>
-                <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
-                  A fiber ISP marketing site and signup wizard — availability check, plans,
-                  scheduling, and account, in one continuous flow.
-                </p>
-              </div>
-
-              <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-5">
-                <p className="text-sm text-[var(--text-muted)]">KitchenFlow</p>
-                <p className="mt-2 text-xl font-semibold">Built end-to-end</p>
-                <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
-                  A six-module kitchen operations dashboard — live ticket board, station load,
-                  crew, and service analytics.
-                </p>
-              </div>
-
-              <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-5">
-                <p className="text-sm text-[var(--text-muted)]">SupportDesk</p>
-                <p className="mt-2 text-xl font-semibold">3675ms {"→"} 2.3ms</p>
-                <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
-                  Ticketing dashboard optimized for search, filtering, rendering workload,
-                  pagination and responsiveness.
-                </p>
-              </div>
-
-              <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-5">
-                <p className="text-sm text-[var(--text-muted)]">RevenuePulse</p>
-                <p className="mt-2 text-xl font-semibold">2000ms {"→"} 140ms</p>
-                <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
-                  SaaS analytics dashboard optimized for KPI loading, chart rendering, search,
-                  filtering and dashboard responsiveness.
-                </p>
-              </div>
+              {recentWork.map((work, index) => (
+                <Reveal key={work.label} delay={220 + index * 90}>
+                  <div className="rounded-[var(--radius-lg)] border border-[var(--border)] bg-black/30 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--accent)]">
+                    <p className="text-sm text-[var(--text-muted)]">{work.label}</p>
+                    <p className="mt-2 text-xl font-semibold">{work.headline}</p>
+                    <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
+                      {work.description}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
             </div>
           </Reveal>
         </div>
@@ -122,7 +139,7 @@ export function Hero() {
         <div className="relative z-10 mt-20 border-t border-[var(--border)] pt-10">
           <div className="grid gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
             <Reveal className="motion-stat" delay={80}>
-              <p className="text-3xl font-bold">5 Case Studies</p>
+              <p className="text-3xl font-bold">6 Case Studies</p>
               <p className="mt-2 text-sm text-[var(--text-secondary)]">
                 Product Builds &amp; Performance Work
               </p>

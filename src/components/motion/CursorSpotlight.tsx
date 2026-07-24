@@ -4,23 +4,24 @@ import { useEffect, useRef } from "react";
 
 export function CursorSpotlight() {
   const frame = useRef(0);
-  const pending = useRef<MouseEvent | null>(null);
+  const pending = useRef<{ card: HTMLElement; event: PointerEvent } | null>(null);
 
   useEffect(() => {
+    const canHover = window.matchMedia("(hover: hover) and (pointer: fine)");
+
+    if (!canHover.matches) {
+      return;
+    }
+
     const apply = () => {
       frame.current = 0;
-      const event = pending.current;
+      const pendingMove = pending.current;
 
-      if (!event) {
+      if (!pendingMove) {
         return;
       }
 
-      const card = (event.target as HTMLElement).closest<HTMLElement>(".motion-card");
-
-      if (!card) {
-        return;
-      }
-
+      const { card, event } = pendingMove;
       const rect = card.getBoundingClientRect();
       const x = ((event.clientX - rect.left) / rect.width) * 100;
       const y = ((event.clientY - rect.top) / rect.height) * 100;
@@ -29,18 +30,20 @@ export function CursorSpotlight() {
       card.style.setProperty("--spot-y", `${y}%`);
     };
 
-    const handleMove = (event: MouseEvent) => {
-      pending.current = event;
+    const handleMove = (event: PointerEvent) => {
+      const card = event.currentTarget as HTMLElement;
+      pending.current = { card, event };
 
       if (!frame.current) {
         frame.current = requestAnimationFrame(apply);
       }
     };
 
-    document.addEventListener("mousemove", handleMove, { passive: true });
+    const cards = Array.from(document.querySelectorAll<HTMLElement>(".motion-card"));
+    cards.forEach((card) => card.addEventListener("pointermove", handleMove, { passive: true }));
 
     return () => {
-      document.removeEventListener("mousemove", handleMove);
+      cards.forEach((card) => card.removeEventListener("pointermove", handleMove));
       cancelAnimationFrame(frame.current);
     };
   }, []);

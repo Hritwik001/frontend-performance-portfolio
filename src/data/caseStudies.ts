@@ -33,6 +33,11 @@ export type CaseStudyBreakdownItem = {
   body: string;
 };
 
+export type CaseStudyScope = {
+  value: string;
+  note: string;
+};
+
 export type CaseStudy = {
   slug: string;
   eyebrow: string;
@@ -40,6 +45,7 @@ export type CaseStudy = {
   subtitle: string;
   summary: string;
   performance?: PerformanceMetrics;
+  scope?: CaseStudyScope;
   breakdown: CaseStudyBreakdownItem[];
   media: CaseStudyMedia[];
   links: CaseStudyLink[];
@@ -186,6 +192,68 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],
+  },
+  {
+    slug: "my-tango-events",
+    eyebrow: "Frontend Design Concept",
+    title: "My Tango Events",
+    subtitle: "Argentine Tango Events Discovery — Landing Page Concept",
+    summary:
+      "A visually rich, editorial marketing site concept for a global Argentine tango events platform — built to show off art direction, motion, and interaction craft rather than a real backend product.",
+    scope: {
+      value: "Design Concept",
+      note: "A frontend-only landing page and event browser — local demo data, no backend, built to showcase UI craft.",
+    },
+    breakdown: [
+      {
+        label: "Challenge",
+        body: "Most portfolio landing pages default to generic SaaS templates. The goal was a concept that could carry its own visual identity — bold editorial type, a warm wine-and-gold palette, and tango-inspired motion — while staying accessible and fast.",
+      },
+      {
+        label: "Build",
+        body: "Built in Next.js 16 App Router with React 19, TypeScript, and Tailwind CSS 4: an abstract CSS hero with ambient, reduced-motion-aware animation, scroll-triggered Intersection Observer reveals, and an interactive event discovery section with category filters, live text search, and save/unsave states, backed by local demo data since this is a frontend-only concept.",
+      },
+      {
+        label: "Outcome",
+        body: "A polished, responsive marketing site and event-discovery UI that demonstrates editorial design sense and interaction detail without a real backend behind it.",
+      },
+    ],
+    media: [
+      {
+        type: "image",
+        src: "/images/tangoevents/hero.png",
+        alt: "My Tango Events landing page hero with editorial typography and a warm wine-and-gold art direction",
+        label: "Landing Page",
+        caption: "Bold editorial hero with abstract CSS artwork and ambient, reduced-motion-aware animation.",
+      },
+      {
+        type: "image",
+        src: "/images/tangoevents/discovery.png",
+        alt: "My Tango Events interactive event discovery section with category filters, search, and save states",
+        label: "Event Discovery",
+        caption: "Category filters, live search, and save/unsave states across milongas, festivals, and workshops.",
+      },
+      {
+        type: "image",
+        src: "/images/tangoevents/organizers.png",
+        alt: "My Tango Events organizer section inviting event hosts to list their event",
+        label: "For Organizers",
+        caption: "A dedicated organizer section pitching global reach and simple listing tools.",
+      },
+    ],
+    links: [
+      {
+        label: "Live Demo",
+        href: "https://my-tango-events.vercel.app",
+        variant: "primary",
+      },
+      {
+        label: "View on GitHub",
+        href: "https://github.com/Hritwik001/my-tango-events",
+        variant: "secondary",
+      },
+    ],
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "UI/UX Design"],
   },
   {
     slug: "kitchenflow",

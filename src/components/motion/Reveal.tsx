@@ -25,15 +25,12 @@ export function Reveal({ children, className = "", delay = 0, direction = "up" }
   return (
     <motion.div
       className={className}
-      style={{ willChange: "transform, opacity" }}
       initial={{ opacity: 0, x: offset.x, y: offset.y }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: false, margin: "0px 0px -10% 0px", amount: 0 }}
+      viewport={{ once: false, margin: "0px 0px -80px 0px", amount: 0 }}
       transition={{
-        type: "spring",
-        stiffness: 140,
-        damping: 20,
-        mass: 0.9,
+        duration: 0.52,
+        ease: [0.16, 1, 0.3, 1],
         delay: delay / 1000,
       }}
     >

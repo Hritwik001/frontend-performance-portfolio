@@ -12,7 +12,7 @@ export function CaseStudies() {
         <SectionHeading
           eyebrow="Selected Work"
           title="Frontend engineering, shown through the work itself."
-          description="Three products built from the ground up, and two documented performance turnarounds — the same engineering discipline applied to building and to fixing."
+          description="Three products built from the ground up, two documented performance turnarounds, and a design-led concept — the same engineering discipline applied to building, fixing, and designing."
         />
 
         <div className="mt-16 space-y-10">
