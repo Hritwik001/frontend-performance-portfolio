@@ -71,7 +71,11 @@ export function Hero() {
             <Eyebrow>Frontend Engineer — React.js / Next.js</Eyebrow>
 
             <Heading className="mt-5 max-w-4xl">
-              <TextReveal text="Frontend engineering for products that feel as good as they look." />
+              <TextReveal
+                text="Frontend engineering for products that feel"
+                accentText="as good as they look."
+                accentClassName="font-display-accent text-gold-shine"
+              />
             </Heading>
 
             <Text className="mt-6 max-w-3xl">

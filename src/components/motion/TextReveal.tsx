@@ -4,8 +4,10 @@ import { motion, Variants } from "framer-motion";
 
 type TextRevealProps = {
   text: string;
+  accentText?: string;
   className?: string;
   wordClassName?: string;
+  accentClassName?: string;
   delay?: number;
   stagger?: number;
 };
@@ -26,8 +28,18 @@ const word: Variants = {
   },
 };
 
-export function TextReveal({ text, className = "", wordClassName = "", delay = 0 }: TextRevealProps) {
-  const words = text.split(" ");
+export function TextReveal({
+  text,
+  accentText,
+  className = "",
+  wordClassName = "",
+  accentClassName = "",
+  delay = 0,
+}: TextRevealProps) {
+  const words = [
+    ...text.split(" ").map((w) => ({ text: w, accent: false })),
+    ...(accentText ? accentText.split(" ").map((w) => ({ text: w, accent: true })) : []),
+  ];
 
   return (
     <motion.span
@@ -40,12 +52,13 @@ export function TextReveal({ text, className = "", wordClassName = "", delay = 0
     >
       {words.map((w, i) => (
         <motion.span
-          key={`${w}-${i}`}
+          key={`${w.text}-${i}`}
           variants={word}
-          className={`inline-block will-change-transform ${wordClassName}`}
+          className={`inline-block will-change-transform ${i < words.length - 1 ? "mr-[0.28em]" : ""} ${
+            w.accent ? accentClassName : wordClassName
+          }`}
         >
-          {w}
-          {i < words.length - 1 ? " " : ""}
+          {w.text}
         </motion.span>
       ))}
     </motion.span>

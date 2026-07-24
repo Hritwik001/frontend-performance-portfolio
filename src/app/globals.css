@@ -37,6 +37,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  position: relative;
   background:
     radial-gradient(circle at top left, rgba(245, 197, 66, 0.10), transparent 34rem),
     radial-gradient(circle at bottom right, rgba(245, 197, 66, 0.07), transparent 40rem),
@@ -44,6 +45,47 @@ body {
     var(--background);
   color: var(--text-primary);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent-deep), var(--accent));
+  border-radius: 999px;
+  border: 2px solid var(--background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+html {
+  scrollbar-color: var(--accent-deep) var(--background);
+  scrollbar-width: thin;
+}
+
+.font-display-accent {
+  font-family: var(--font-display-accent), serif;
+  font-style: italic;
+  font-weight: 500;
 }
 
 ::selection {
